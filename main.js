@@ -10,13 +10,13 @@ window.addEventListener('resize', () => {
 document.addEventListener('DOMContentLoaded', (event) => {
   // 获取URL参数
   const urlParams = new URLSearchParams(window.location.search);
-  const replyText = urlParams.get('replyText');
+  const reply = urlParams.get('reply');
 
-  // 检测是否有replyText参数
-  if (replyText) {
+  // 检测是否有reply参数
+  if (reply) {
       // 如果有参数，则更新wechat-need-reply-text的内容
       document.getElementById('wechat-need-reply').style.display = 'flex';
-      document.getElementById('wechat-need-reply-text').textContent = replyText;
+      document.getElementById('wechat-need-reply-text').textContent = reply;
   } else {
       // 如果没有参数，则隐藏wechat-need-reply部分
       document.getElementById('wechat-need-reply').style.display = 'none';
